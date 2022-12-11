@@ -1,0 +1,100 @@
+* {
+    background-color: #e6f2ff;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    /*position: absolute;
+    left: 45%;*/
+    margin: 0px;
+    width: 830px;
+}
+
+th {
+    background-color: #002966;
+    border-left: 1px #e6f2ff solid;
+    color: white;
+}
+
+td:nth-child(even) {
+    text-align: left;
+}
+
+td {
+    width: 100px;
+    border-bottom: 1px solid #9999ff;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 2px;
+}
+
+#filter,
+#buy,
+#ok,
+#submitBtn {
+    background-color: #002966;
+    color: white;
+    font-style: italic;
+    border: 2px #9999ff ridge;
+    padding: 7px;
+    width: 80px;
+    border-radius: 7px;
+}
+
+#filter,
+#buy:hover {
+    background-color: #e6f2ff;
+    color: #002966;
+    font-weight: bold;
+}
+
+#remove {
+    background-color: red;
+    color: white;
+    font-style: unset;
+    padding: 7px;
+    width: 110px;
+    border-radius: 7px;
+}
+
+#remove:hover {
+    background-color: white;
+    color: red;
+}
+
+#totalRow>td {
+    font-weight: bold;
+    background-color: #002966;
+    color: white;
+}
+
+img {
+    width: 130px;
+    height: 75px;
+    padding: 0px;
+}
+
+div {
+    border-color: gray;
+}
+
+h3 {
+    margin: 0px;
+    padding: 10px;
+}
+
+div #formDiv {
+    width: 560px;
+    padding: 10px;
+}
+
+input {
+    padding: 7px;
+}
+
+form>p {
+    padding: 5px;
+    width: 200px;
+    background-color: #002966;
+}
