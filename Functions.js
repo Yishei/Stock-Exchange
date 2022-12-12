@@ -141,27 +141,25 @@ function sellStocks(i) {
     };
 };
 
-function generateFTable() {
-    document.getElementById('removeFliterBtn').style.display = 'block';
-
-    let totalValue = 0;
-    let totalStocks = 0;
-    document.getElementById('head').innerHTML = 'Stock Market';
+function filter(){
     let tableBody = document.getElementById('tableB');
     tableBody.innerHTML = null;
-    for (let i = 0; i < companies.length; i++) {
-        let company = companies[i];
-        if (company.amount) {
-            company.value = company.price * company.amount;
-            totalValue += company.value;
-            totalStocks += company.amount;
-            createTable(tableBody, company, i);
-
-        };
-    };
-    totalRow(tableBody, totalStocks, totalValue);
+    for(let i = 0; i < companies.length; i++){
+        if(companies[i].amount){
+            tableRowGenerater(tableBody, i);
+        }
+    }
+    totalRowGenerater(tableBody);
+    document.getElementById('filter-button').style.display = 'none';
+    document.getElementById('remove-filter').style.display = 'block';
 };
 
+
+function removeFilter(){
+    generateTable();
+    document.getElementById('remove-filter').style.display = 'none';
+    document.getElementById('filter-button').style.display = 'block';
+}
 async function getLastClosePrice(ticker){
     let today = new Date().getDate();
     let response = await fetch(`https://api.polygon.io/v2/aggs/ticker/${ticker}/prev?adjusted=true&apiKey=_7I6zHnwCXTS7ZaeHW2oWLBkbYCyxASg`);
